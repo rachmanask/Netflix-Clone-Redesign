@@ -124,6 +124,11 @@ button {
   padding-right: 4px;
   font-weight: 500;
 }
+@media (max-width: 765px) {
+  .nf-navbar__items {
+    display: none;
+  }
+}
 
 /* 
   2. Header
