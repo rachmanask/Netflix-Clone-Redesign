@@ -1,0 +1,229 @@
+/* @Variables CSs */
+:root {
+  --red-color: #db202c;
+  --dark-color: #1a1c22;
+  --dark2-color: #1f2127;
+  --white-color: #fef4f4;
+
+  --padding-x: 80px;
+  --padding-y: 60px;
+}
+
+/* 
+  a. Global Style
+*/
+
+body {
+  color: white !important;
+  background-color: var(--dark-color) !important;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Volkhov", serif !important;
+  letter-spacing: -1.5%;
+}
+
+@media (min-width: 1180px) {
+  h2 {
+    font-size: 40px !important;
+    line-height: 72px !important;
+  }
+  h1 {
+    font-size: 56px !important;
+    line-height: 80px !important;
+  }
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+/* 
+  b. Global Class
+*/
+
+/* @wrapper */
+.nf-wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+@media (max-width: 1180px) {
+  .nf-wrapper {
+    padding: 0 calc(var(--padding-x) / 2);
+  }
+}
+
+/* @btn-primary */
+.nf-btn-primary {
+  background: linear-gradient(96.02deg, #bc0e19 7.77%, var(--red-color) 91.68%);
+  padding: 9px 28px;
+  color: white;
+  box-shadow: 0px 5px 25px rgba(192, 30, 41, 0.5);
+  border-radius: 15px;
+  transition: box-shadow ease-in-out 0.4s;
+  font-weight: 500;
+}
+.nf-btn-primary:hover,
+.nf-btn-primary:focus {
+  box-shadow: 0px 0px 25px var(--red-color);
+}
+
+/* 
+  1. Navbar 
+*/
+.nf-navbar {
+}
+.nf-navbar__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding-y) 0;
+}
+/* @Logo */
+.nf-navbar__logo {
+  width: 100px;
+}
+/* @Items */
+.nf-navbar__items {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-weight: 500;
+}
+.nf-navbar__item {
+  padding: 0 12px;
+  font-size: 16px;
+}
+.nf-navbar__item > a,
+.nf-navbar__item > a:hover,
+.nf-navbar__item > a:focus {
+  text-decoration: none;
+  color: var(--white-color);
+}
+/* @Actions */
+.nf-navbar__actions {
+  display: flex;
+  align-items: center;
+}
+.nf-navbar__lang {
+  padding-right: 14px;
+  display: flex;
+  align-items: center;
+}
+.nf-navbar__lang span {
+  font-size: 16px;
+  padding-right: 4px;
+  font-weight: 500;
+}
+
+/* 
+  2. Header
+*/
+.nf-header {
+  display: flex;
+  align-items: center;
+}
+.nf-header__left {
+  width: 50%;
+  padding-right: 40px;
+  z-index: 3;
+  position: relative;
+  transition: width ease-in-out 0.2s;
+}
+.nf-header__left::before {
+  content: "";
+  position: absolute;
+  background-color: var(--dark-color);
+  height: 700px;
+  width: 100%;
+  z-index: -1;
+  top: -200px;
+}
+
+.nf-header__desc {
+  margin-top: 12px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  color: #bbbbbb !important;
+}
+.nf-header__right {
+  position: relative;
+  height: 700px;
+  width: 50%;
+  transition: all ease-in-out 0.2s;
+}
+.nf-header__right::before {
+  content: "";
+  position: absolute;
+  height: 700px;
+  width: 700px;
+  left: -140px;
+  border-radius: 50%;
+  background: linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(76, 94, 151, 1) 75%
+  );
+}
+.nf-header__right::after {
+  content: "";
+  position: absolute;
+  height: 525px;
+  width: 413px;
+  bottom: 0;
+  background: url(/assets/img/spiderman.png);
+  background-size: cover;
+}
+@media (max-width: 660px) {
+  .nf-header__right {
+    width: 0%;
+    overflow: hidden;
+    height: 0;
+  }
+
+  .nf-header__left {
+    width: 100%;
+    padding-right: 0;
+  }
+  .nf-header__left::before {
+    height: 0;
+  }
+}
+
+/* 
+  3. Services
+*/
+
+.nf-services {
+  margin: 120px 0;
+}
+.nf-services h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.nf-services__card {
+  margin: 8px 0;
+  background-color: #1f2127;
+  padding: 24px;
+  border-radius: 30px;
+  min-height: 288px;
+}
+.nf-services__card-title {
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+.nf-services__card-desc {
+  font-size: 14px;
+  color: #bbbbbb !important;
+  margin-bottom: 8px;
+}
