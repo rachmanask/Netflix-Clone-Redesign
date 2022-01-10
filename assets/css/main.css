@@ -301,3 +301,57 @@ button {
     text-align: center;
   }
 }
+
+/*  
+  6. Popular
+*/
+
+.nf-popular {
+  margin-top: 30px;
+}
+.nf-popular__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 14px;
+}
+.nf-popular__card {
+  margin: 8px 0;
+  background-color: #1f2127;
+  padding: 24px 18px;
+  border-radius: 30px;
+  min-height: 288px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease-in-out;
+  outline: 2px solid transparent;
+}
+.nf-popular__img {
+  height: 155px !important;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.nf-popular__card:hover {
+  outline: 2px solid rgb(116, 116, 116);
+}
+.nf-popular__card-title {
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+.nf-popular__card-desc {
+  font-size: 14px;
+  color: #bbbbbb !important;
+  margin-bottom: 8px;
+}
+.nf-popular__rate {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+}
+.nf-popular__rate-title {
+  font-size: 12px;
+  margin-left: 8px;
+  color: #bbbbbb !important;
+}
