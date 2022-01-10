@@ -54,9 +54,10 @@ button {
   max-width: 1180px;
   margin: 0 auto;
 }
-@media (max-width: 1180px) {
+@media (max-width: 2100px) {
   .nf-wrapper {
     padding: 0 calc(var(--padding-x) / 2);
+    overflow-x: hidden;
   }
 }
 
@@ -209,7 +210,8 @@ button {
 */
 
 .nf-services {
-  margin: 120px 0;
+  margin-top: 120px;
+  margin-bottom: 32px;
 }
 .nf-services h2 {
   text-align: center;
@@ -231,4 +233,71 @@ button {
   font-size: 14px;
   color: #bbbbbb !important;
   margin-bottom: 8px;
+}
+@media (max-width: 765px) {
+  .nf-services {
+    margin: 80px 0;
+  }
+}
+
+/* 
+5. Watch 
+*/
+.nf-watch {
+  display: grid;
+  display: -ms-grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  column-gap: 34px;
+}
+.nf-watch__img {
+  height: 538px;
+  position: relative;
+}
+.nf-watch__img img {
+  height: 100%;
+}
+.nf-watch__img::before {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto 0;
+  background-color: rgba(95, 122, 219, 0.8);
+  z-index: -1;
+  filter: blur(50px);
+  border-radius: 50%;
+}
+.nf-watch__title {
+  align-content: center;
+}
+@media (max-width: 1180px) {
+  .nf-watch__img {
+    height: 480px;
+  }
+}
+@media (max-width: 1000px) {
+  .nf-watch__img {
+    height: 420px;
+  }
+}
+@media (max-width: 900px) {
+  .nf-watch {
+    row-gap: 20px;
+    grid-template-columns: 100%;
+  }
+  .nf-watch__img {
+    height: 100%;
+    width: 100%;
+    grid-row: 2;
+  }
+  .nf-watch__img img {
+    width: 100%;
+  }
+  .nf-watch__title {
+    text-align: center;
+  }
 }
